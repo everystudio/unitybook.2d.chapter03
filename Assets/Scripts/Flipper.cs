@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class Flipper : MonoBehaviour
 {
-    [SerializeField] private HingeJoint2D myHingeJoint;
+    [SerializeField] private HingeJoint2D axisHingeJoint;
+    [SerializeField] private Rigidbody2D bodyRigidbody;
     void Update()
     {
-        myHingeJoint.useMotor = Input.GetMouseButton(1);
+        axisHingeJoint.useMotor = Input.GetMouseButton(1);
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            bodyRigidbody.bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (bodyRigidbody.IsSleeping())
+        {
+            bodyRigidbody.bodyType = RigidbodyType2D.Static;
+        }
+
     }
 }

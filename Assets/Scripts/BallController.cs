@@ -12,9 +12,10 @@ public class BallController : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            myRigidbody.AddForce(Vector2.up * shootPower, ForceMode2D.Impulse);
-        }
+    }
+
+    public void Jump()
+    {
+        myRigidbody.AddForce(Vector2.up * shootPower, ForceMode2D.Impulse);
     }
 }
