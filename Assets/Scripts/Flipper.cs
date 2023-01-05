@@ -18,7 +18,7 @@ public class Flipper : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (bodyRigidbody.IsSleeping())
+        if (bodyRigidbody.IsSleeping() && !Input.GetMouseButton(1))
         {
             bodyRigidbody.bodyType = RigidbodyType2D.Static;
         }
