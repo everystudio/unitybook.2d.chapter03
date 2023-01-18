@@ -9,7 +9,7 @@ public class StartArea : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BallController ballController))
         {
-            Debug.Log("enter");
+            //Debug.Log("enter");
             this.ballController = ballController;
         }
     }
@@ -17,7 +17,7 @@ public class StartArea : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BallController ballController))
         {
-            Debug.Log("exit");
+            //Debug.Log("exit");
             this.ballController = null;
         }
     }

@@ -12,7 +12,7 @@ public class Bumper : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             myAnimator.SetTrigger("Shake");
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
         }
     }
 }
